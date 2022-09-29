@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled25/list_students.dart';
 import 'edit.dart';
 
 import 'db.dart';
@@ -76,6 +77,8 @@ class _EditStudent extends State<EditStudent> {
                     //update table with roll no.
                     ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(content: Text("Student Data Updated")));
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ListStudents()));
                   },
                   child: Text("Update Student Data")),
             ],
